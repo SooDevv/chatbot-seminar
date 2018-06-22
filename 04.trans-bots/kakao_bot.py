@@ -2,6 +2,7 @@ from flask import Flask
 from flask import request
 from flask import jsonify
 from flask import json
+from googletrans import Translator
 
 app = Flask(__name__)
 
@@ -20,10 +21,13 @@ def keyboard():
 def message():
     data = json.loads(request.data)
     content = data["content"]
+    print(content)
+    translator = Translator()
+    translated = translator.translate(content)
 
     response = {
         "message": {
-            "text": content
+            "text": translated.text
         }
     }
 
