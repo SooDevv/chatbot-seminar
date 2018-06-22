@@ -51,7 +51,7 @@ def parse_messages(updates):
 def send_message(chat_id, content):
     translator = Translator()
     text = translator.translate(content)
-    url = URL + "sendMessage?chat_id={}&text={}".format(chat_id, text)
+    url = URL + "sendMessage?chat_id={}&text={}".format(chat_id, text.text)
     get_url(url)
 
 

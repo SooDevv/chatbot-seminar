@@ -6,6 +6,7 @@ from flask import json
 from common import *
 
 app = Flask(__name__)
+def get_response(text):
 
 
 @app.route("/")
