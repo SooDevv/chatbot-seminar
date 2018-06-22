@@ -6,18 +6,14 @@ from flask import json
 from common import *
 
 app = Flask(__name__)
-def get_response(text):
-
 
 @app.route("/")
 def hello_world():
     return "Hello world"
 
-
 @app.route("/keyboard")
 def keyboard():
     return jsonify(type="text")
-
 
 @app.route("/message", methods=["POST"])
 def message():
@@ -34,7 +30,6 @@ def message():
 
     response = json.dumps(response, ensure_ascii=False)
     return response
-
 
 if __name__ == "__main__":
     setup()
