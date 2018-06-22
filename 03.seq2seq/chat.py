@@ -1,6 +1,6 @@
 from model import seq2seq
 import tensorflow as tf
-import re,json
+import json
 from data_process import *
 
 if __name__ == "__main__":

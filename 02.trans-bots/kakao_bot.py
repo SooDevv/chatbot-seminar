@@ -21,7 +21,6 @@ def keyboard():
 def message():
     data = json.loads(request.data)
     content = data["content"]
-    print(content)
     translator = Translator()
     translated = translator.translate(content)
 
@@ -36,4 +35,4 @@ def message():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5001)
+    app.run(host="0.0.0.0", port=5000)

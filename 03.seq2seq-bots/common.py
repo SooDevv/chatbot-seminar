@@ -3,7 +3,7 @@ import sys
 import os
 import json
 
-PATH = "../02.seq2seq"
+PATH = "../03.seq2seq"
 sys.path.insert(0, PATH)
 
 from model import seq2seq
