@@ -6,11 +6,6 @@ from flask import json
 app = Flask(__name__)
 
 
-@app.route("/")
-def hello_world():
-    return "Hello, World!"
-
-
 @app.route("/keyboard")
 def keyboard():
     response = {
@@ -33,7 +28,7 @@ def message():
         url = "http://ppss.kr/wp-content/uploads/2017/05/3-51-540x303.jpg"
     else:
         text = "취소되었습니다."
-        url = "https://media.istockphoto.com/vectors/stamp-cancelled-with-red-text-on-white-vector-id501999973?k=6&m=501999973&s=612x612&w=0&h=PkbjxJ38-qUEUKOuGbVd9kL8_9IWjsZbm6FueRZU8fY="
+        url = "http://thumbs.dreamstime.com/x/cancel-sign-button-3053748.jpg"
 
     response = {
       "message": {
@@ -63,4 +58,4 @@ def message():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=80)

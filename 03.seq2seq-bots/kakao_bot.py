@@ -7,9 +7,6 @@ from common import *
 
 app = Flask(__name__)
 
-@app.route("/")
-def hello_world():
-    return "Hello world"
 
 @app.route("/keyboard")
 def keyboard():
@@ -33,4 +30,4 @@ def message():
 
 if __name__ == "__main__":
     setup()
-    app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=80)

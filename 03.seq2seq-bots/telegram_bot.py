@@ -5,15 +5,13 @@ from common import *
 
 
 #  봇 토큰
-TOKEN = "<TOKEN>"
+TOKEN = "582776136:AAEAYv-n-ckgQZ7zUNVisvwa9JhbCql_fYs"
 URL = "https://api.telegram.org/bot{}/".format(TOKEN)
-
 
 def get_url(url):
     response = requests.get(url)
     content = response.content.decode("utf8")
     return content
-
 
 def get_json_from_url(url):
     content = get_url(url)
@@ -24,7 +22,6 @@ def get_json_from_url(url):
     else:
         return js
 
-
 def get_updates(offset):
     url = URL + "getUpdates"
     if offset:
@@ -32,13 +29,11 @@ def get_updates(offset):
     js = get_json_from_url(url)
     return js
 
-
 def get_last_update_id(updates):
     update_ids = []
     for update in updates["result"]:
         update_ids.append(int(update["update_id"]))
     return max(update_ids)
-
 
 def parse_messages(updates):
     for update in updates["result"]:
