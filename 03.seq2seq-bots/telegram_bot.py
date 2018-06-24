@@ -5,7 +5,7 @@ from common import *
 
 
 #  봇 토큰
-TOKEN = "582776136:AAEAYv-n-ckgQZ7zUNVisvwa9JhbCql_fYs"
+TOKEN = "<TOKEN>"
 URL = "https://api.telegram.org/bot{}/".format(TOKEN)
 
 def get_url(url):
